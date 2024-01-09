@@ -2,23 +2,39 @@
 <html>
     <head>
         <title>My form</title>
-        <link rel="stylesheet" href="signin.css">
+        <link rel="stylesheet" href="sign.css">
     </head>
     <body>
-        <div id="con">
-            <h1>Log In</h1>
-            <form id="form" onsubmit="return right()">
-                <label for="">Email</label><br>
-                <input type="email" id="na"/><br>
-                <p id="name" class="in"> </p>
-                <label for="">Password</label><br>
-                <input type="password" id="password"/><br>
-                <p id="pass" class="in"> </p>
-                <!-- <button id="button">Log in</button> -->
-                <input type="submit" id="submit" value="submit"  /><br><br>
-                <a href="signup.html">go to sign up</a>
-            </form>
+        <div class="outer-box">
+            <div class="inner-box">
+                <header class="signup-header">
+                    <h1>Sign Up</h1>
+                    
+                </header>
+                <main class="signup-body">
+                    <form action="#">
+                        <table>
+                        <tr>
+                            <td><label for="fullname">Full Name</label></td>
+                            <td><input type="text" id="fullname" placeholder="Bittu Sharma" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Your Email</label></td>
+                            <td><input type="email" id="email" placeholder="deepcode192@gmail.com" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fullname">password  </label></td>
+                            <td><input type="password" id="password" placeholder="At least 8 charactor" required></td>
+                        </tr>
+                        </table>
+                            <button>Submit</button>
+                    </form>
+                </main>
+                <footer class="signup-footger">
+                    <p>Already have a Account? <a href="#">Login</a></p>
+                </footer>
+            </div>
+
         </div>
-        <script src="form.js"></script>
     </body>
 </html>
