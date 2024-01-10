@@ -1,2 +1,2 @@
-# -POTD
-This is my every day coding
+Development journey
+My Development........
