@@ -1,0 +1,79 @@
+//Addition of two number in string formate (sum any digit number).
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+ {
+ //input two number in string formate.
+     string s1,s2,ans; //ans variable for ans store.
+     cout<<"Enter first number: ";
+     cin>>s1; //s1 for first number input.
+     cout<<"Enter second number: ";
+     cin>>s2;  //s2 for second number input.
+     int carry =0,sum=0;
+
+//if number length is different than sum for small length number according .
+   //loop terminated at small length string, I take two variable for two string manage by index.
+    for(int i=s1.size()-1,j=s2.size()-1;i>=0&&j>=0;i--,j--){ 
+     sum=(int)s1[i]-48+(int)s2[j]-48+carry;        //addition two number from last digit .
+     if(sum>9)
+     {
+        sum%=10;
+         carry=1;
+     }
+     else
+     {
+         carry=0;
+     }
+     ans+=char(sum+48);   //addition in ans variable in string formate.
+    }
+
+//if different length than rest number addition code.
+//if s2 length is big.
+    if(s1.size()<s2.size()){  //if s2 length is big.
+    int l=s2.size()-s1.size();
+    for(int i=l-1;i>=0;i--){
+        sum=(int)s2[i]-48+carry;
+        if(sum>9)
+        {
+        sum%=10;
+         carry=1;
+     }
+     else
+     {
+         carry=0;
+     }
+     ans+=char(sum+48);
+    }
+    }
+
+//if s1 length is big
+    else{
+    int l=s1.size()-s2.size();
+    for(int i=l-1;i>=0;i--){
+        sum=(int)s1[i]-48+carry;
+        if(sum>9)
+        {
+        sum%=10;
+         carry=1;
+     }
+     else
+     {
+         carry=0;
+     }
+     ans+=char(sum+48);
+    }
+    }
+//in last if carry .
+ if(carry==1)
+    ans+="1";
+
+//show ans in reverse order, because ans store result in reverse order.
+cout<<"Sum of "<<s1<<" and "<<s2<<" is: ";
+for(int i=ans.size()-1;i>=0;i--){
+    cout<<ans[i];
+}
+
+ }
+
