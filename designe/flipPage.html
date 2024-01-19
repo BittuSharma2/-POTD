@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Page</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-inner" id="rotate">
+            <div class="card-front">
+                <table>
+                    <tr>
+                <td colspan="2"><h3>Log In</h3></tr>
+                    </tr>
+                    <tr>
+                <td><label for="">Email</label></td>
+                <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                <td><label for="">Password</label></td>
+               <td><input type="password"></td>
+                    </tr>
+                    <tr class="btn">
+                <td colspan="2"><button>Log in</button></td>
+                    </tr>
+                    <p onclick="pageflip1()">go to sign up</p>
+                </table>
+            </div>
+            <div class="card-back">
+                <table>
+                    <tr>
+                <td><h3>Sign up</h3></tr>
+                    </tr>
+                    <tr>
+                        <td><label for="">Name</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                <td><label for="">Email</label></td>
+                <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                <td><label for="">Password</label></td>
+               <td><input type="password"></td>
+                    </tr>
+                    <tr class="btn">
+                <td><button type="submit">Sign up</button></td>
+                    </tr>
+                    <p onclick="pageflip2()">go to log in</p>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+
+function pageflip1(){
+    document.getElementById("rotate").style.transform="rotateY(180deg)";
+}
+
+function pageflip2(){
+    document.getElementById("rotate").style.transform="rotateY(0deg)";
+}
+    </script>
+</body>
+</html>
