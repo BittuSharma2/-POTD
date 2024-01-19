@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(13, 250, 230);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    /* border: 1px solid brown; */
+    height: 500px;
+    width: 500px;
+    
+    border-radius: 30px;
+}
+.card-inner{
+    
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9999s;
+
+    border-radius: 30px;
+    background-color:rgb(2, 182, 155);
+    
+}
+
+.card-front,.card-back{
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* .card-inner:hover{
+    transform: rotateY(180deg);
+} */
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+table{
+    height: 400px;
+    width: 400px;
+    padding: 30px;
+    color: black;
+    font-size: 30px;
+}
+input{
+    border: none;
+    font-size: 25px;
+    height: 35px;
+    width: 200px;
+    background-color: rgb(2, 182, 155);
+    outline: none;
+    border-bottom: 2px solid black;
+}
+button{
+    
+    background-color: rgb(2, 182, 155);
+    box-shadow: inset 0 0 10px 5px rgb(13, 250, 230);
+    border: 2px solid rgb(13, 250, 230);
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0 0 10px 5px rgb(13, 250, 230);
+}
+td{
+    padding: 5px;
+}
+h3{
+    cursor:default;
+}
+p{
+    padding: 5px;
+    color:blue;
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+}
+p:hover{
+    color: rgb(1, 1, 95);
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
